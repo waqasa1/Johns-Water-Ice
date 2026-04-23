@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-const LOGO_B64 = "data:image/webp;base64,UklGRnotAABXRUJQVlA4WAoAAAAQAAAA/wEA/wEAQUxQSNUOAA..."; // Truncated for display
+import logo from '../assets/pictures/johns-water-ice-logo.webp';
 import './Footer.css';
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="footer-main container">
         <div className="footer-brand">
           <Link to="/" aria-label="John's Water Ice Home">
-            <img src={LOGO_B64} alt="John's Water Ice" width="90" height="90" loading="lazy" decoding="async" />
+            <img src={logo} alt="John's Water Ice" width="90" height="90" loading="lazy" decoding="async" />
           </Link>
           <p className="footer-tagline">
             The Family Business – Love, Dedication, Passion &amp; Pride. Since 1945.

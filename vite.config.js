@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    assetsInlineLimit: 20480, // Inline files < 20KB (like the logo)
     minify: 'terser',
     terserOptions: {
       compress: {
