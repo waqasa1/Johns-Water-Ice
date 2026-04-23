@@ -1342,9 +1342,13 @@ p {
     
     /* Zero Layout Shift Locks */
     #root { display: flex; flex-direction: column; min-height: 100vh; contain: layout; }
+    .hero-section { min-height: 800px; display: flex; align-items: center; }
     .hero-grid { min-height: 500px; contain: layout; }
     .site-header { min-height: 86px; }
-    .hero-section { min-height: 85vh; }
+    
+    @media (max-width: 1024px) {
+      .hero-section { min-height: 85vh; }
+    }
     
     /* System Font Overrides */
     :root {

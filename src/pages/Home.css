@@ -14,7 +14,7 @@
   position: relative;
   overflow: hidden;
   padding: 60px 0 80px;
-  min-height: 85vh;
+  min-height: 800px;
   display: flex;
   align-items: center;
   contain: layout;
