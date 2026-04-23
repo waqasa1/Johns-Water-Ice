@@ -299,7 +299,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 10: FOUNDER BIO ====== */}
-      <section className="founder-section section-padding" id="founder">
+      <section className="founder-section section-padding" id="founder" style={{ minHeight: "600px" }}>
         <div className="container founder-grid">
           <Reveal direction="left" className="founder-text">
             <h2>Meet the Heart and Soul Behind John&apos;s Water Ice</h2>
@@ -328,7 +328,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 11: FIND US CTA ====== */}
-      <section className="parallax-cta-section parallax-find" id="find-us" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${storeFront})` }}>
+      <section className="parallax-cta-section parallax-find" id="find-us" style={{ minHeight: "450px" }} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${storeFront})` }}>
         <div className="container parallax-cta-content">
           <Reveal>
             <h2>Find Us, Taste the Magic!</h2>
@@ -339,7 +339,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 12: CONTACT / LOCATIONS GREEN ====== */}
-      <section className="contact-section" id="contact">
+      <section className="contact-section" id="contact" style={{ minHeight: "600px" }}>
         <div className="container contact-grid">
           <Reveal direction="left" className="contact-img-wrap">
             <img 
@@ -383,7 +383,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTIONS 13-14: TESTIMONIALS ====== */}
-      <section className="testimonials-section confetti-bg section-padding" id="testimonials">
+      <section className="testimonials-section confetti-bg section-padding" id="testimonials" style={{ minHeight: "500px" }}>
         <div className="container">
           <Reveal>
             <blockquote className="testimonial-hero-quote">
