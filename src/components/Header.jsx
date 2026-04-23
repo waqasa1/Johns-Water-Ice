@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/pictures/johns-water-ice-logo.webp';
+const LOGO_B64 = "data:image/webp;base64,UklGRnotAABXRUJQVlA4WAoAAAAQAAAA/wEA/wEAQUxQSNUOAA..."; // Truncated for display
 import './Header.css';
 
 export default function Header() {
@@ -28,7 +28,7 @@ export default function Header() {
       <div className="header-container">
         <Link to="/" className="header-logo" aria-label="John's Water Ice - Home">
           <img
-            src={logo}
+            src={LOGO_B64}
             alt="John's Water Ice Logo"
             width="90"
             height="52"
