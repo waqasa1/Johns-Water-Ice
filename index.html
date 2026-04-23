@@ -4,11 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John's Water Ice | Philadelphia's Finest Water Ice Since 1945</title>
-  <meta name="description" content="John's Water Ice has been serving Philadelphia's finest water ice, gelati, ice cream, and pretzels since 1945. Visit our locations in Philadelphia and Huntingdon Valley." />
   
+  <!-- Preconnect and Preload Fonts (Fixes 750ms delay) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFkD-vYSZviVYUb_rj3ij__anPXDTjYgFE_GHxcYAZOxt7Z.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxadLCz6Ccy28H6MASmSA.woff2" />
+  
+  <style>
+    /* Ultra-light Critical CSS to prevent Desktop CLS */
+    :root { --white: #ffffff; --green-primary: #0b7a35; --font-display: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif; }
+    body { margin: 0; font-family: var(--font-body); background: var(--white); }
+    .site-header { position: sticky; top: 0; min-height: 86px; background: var(--white); z-index: 1000; }
+    .hero-section { min-height: 85vh; background-color: #e8f6ef; display: flex; align-items: center; }
+    @media (min-width: 1024px) {
+      .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; min-height: 500px; }
+      .site-footer { min-height: 400px; }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/webp" href="/favicon.webp" />
 </head>
