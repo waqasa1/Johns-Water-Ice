@@ -78,7 +78,7 @@ export default function Home() {
   return (
     <>
       {/* ====== SECTION 1: HERO ====== */}
-      <section className="hero-section confetti-bg" id="hero">
+      <section className="hero-section confetti-bg" id="hero" style={{ minHeight: '800px' }}>
         <div className="container hero-grid">
           <div className="hero-content">
             <h1>The Family Business - Love, Dedication, Passion &amp; Pride. Since 1945.</h1>
@@ -115,7 +115,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 2: FREEZE-DRIED PROMO ====== */}
-      <section className="freeze-dried-section section-padding" id="freeze-dried">
+      <section className="freeze-dried-section section-padding" id="freeze-dried" style={{ minHeight: '580px' }}>
         <div className="container freeze-dried-grid">
           <Reveal direction="left" className="freeze-dried-text">
             <h2>Now Available Online: Freeze-Dried Water Ice!</h2>
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 3: GREEN CTA BANNER ====== */}
-      <section className="green-cta-section" id="tradition">
+      <section className="green-cta-section" id="tradition" style={{ minHeight: '500px' }}>
         <div className="container green-cta-grid">
           <Reveal direction="left" className="green-cta-img">
             <img 
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* ====== SECTION 4: ABOUT US ====== */}
-      <section className="about-section section-padding" id="about">
+      <section className="about-section section-padding" id="about" style={{ minHeight: '650px' }}>
         <div className="container about-grid">
           <Reveal direction="left" className="about-text">
             <h2>About Us</h2>
