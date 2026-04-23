@@ -38,14 +38,14 @@ const Reveal = ({ children, direction = 'up', delay = 0, className = '' }) => {
     if (hasEntered) return 'none';
     
     // Check if we should slide at all (disable for first sections to prevent CLS)
-    const isFirstFold = className.includes('hero') || className.includes('freeze');
+    const isFirstFold = className.includes('hero') || className.includes('freeze') || className.includes('green-cta');
     if (isFirstFold) return 'none';
 
     switch (direction) {
-      case 'up': return 'translateY(20px)';
-      case 'down': return 'translateY(-20px)';
-      case 'left': return 'translateX(-20px)';
-      case 'right': return 'translateX(20px)';
+      case 'up': return 'translate3d(0, 15px, 0)';
+      case 'down': return 'translate3d(0, -15px, 0)';
+      case 'left': return 'translate3d(-15px, 0, 0)';
+      case 'right': return 'translate3d(15px, 0, 0)';
       default: return 'none';
     }
   };
