@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="footer-main container">
         <div className="footer-brand">
           <Link to="/" aria-label="John's Water Ice Home">
-            <img src={logo} alt="John's Water Ice" width="130" height="76" loading="lazy" decoding="async" />
+            <img src={logo} alt="John's Water Ice" width="90" height="90" loading="lazy" decoding="async" />
           </Link>
           <p className="footer-tagline">
             The Family Business – Love, Dedication, Passion &amp; Pride. Since 1945.

@@ -12,27 +12,61 @@ import ownerPhoto from '../assets/pictures/Anthony-Cardullo.webp';
 import contactImg from '../assets/pictures/johns-water-ice-pretzel-and-lemon-water-ice.webp';
 import logo from '../assets/pictures/johns-water-ice-logo.webp';
 
-/* ---- Scroll reveal hook ---- */
-function useReveal() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add('revealed'); obs.unobserve(el); } },
-      { threshold: 0.12 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-  return ref;
-}
+/* ---- Scroll reveal component (CLS Optimized) ---- */
+const Reveal = ({ children, direction = 'up', delay = 0, className = '' }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasEntered, setHasEntered] = useState(false);
+  const domRef = useRef(null);
 
-function Reveal({ children, className = '', direction = 'up' }) {
-  const cls = direction === 'left' ? 'reveal-left' : direction === 'right' ? 'reveal-right' : 'reveal';
-  const ref = useReveal();
-  return <div ref={ref} className={`${cls} ${className}`}>{children}</div>;
-}
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setHasEntered(true);
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    if (domRef.current) observer.observe(domRef.current);
+    return () => { if (domRef.current) observer.unobserve(domRef.current); };
+  }, []);
+
+  const getTransform = () => {
+    // If it's already entered, stay at none
+    if (hasEntered) return 'none';
+    
+    // Check if we should slide at all (disable for first sections to prevent CLS)
+    const isFirstFold = className.includes('hero') || className.includes('freeze');
+    if (isFirstFold) return 'none';
+
+    switch (direction) {
+      case 'up': return 'translateY(20px)';
+      case 'down': return 'translateY(-20px)';
+      case 'left': return 'translateX(-20px)';
+      case 'right': return 'translateX(20px)';
+      default: return 'none';
+    }
+  };
+
+  return (
+    <div
+      ref={domRef}
+      className={className}
+      style={{
+        opacity: hasEntered ? 1 : 0,
+        transform: getTransform(),
+        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
+        willChange: 'opacity, transform',
+        // Hide until loaded to prevent visual jumping
+        visibility: hasEntered ? 'visible' : 'hidden'
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 /* ---- Ice Cream Cone Icon SVG ---- */
 function IceCreamIcon() {

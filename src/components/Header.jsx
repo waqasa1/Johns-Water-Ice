@@ -30,8 +30,8 @@ export default function Header() {
           <img
             src={logo}
             alt="John's Water Ice Logo"
-            width="120"
-            height="70"
+            width="90"
+            height="52"
             fetchpriority="high"
             loading="eager"
             decoding="sync"
