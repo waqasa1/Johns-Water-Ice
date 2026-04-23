@@ -121,6 +121,8 @@ p {
 
 .section-padding {
   padding: var(--section-padding);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
 }
 
 /* --- Buttons --- */

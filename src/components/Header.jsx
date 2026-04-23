@@ -33,6 +33,8 @@ export default function Header() {
             width="120"
             height="70"
             fetchpriority="high"
+            loading="eager"
+            decoding="sync"
           />
         </Link>
 

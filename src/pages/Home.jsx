@@ -117,6 +117,8 @@ export default function Home() {
               width="500"
               height="500"
               fetchpriority="high"
+              loading="eager"
+              decoding="sync"
               className="hero-img"
             />
           </div>
@@ -137,7 +139,14 @@ export default function Home() {
           </Reveal>
           <Reveal direction="right" className="freeze-dried-img-wrap">
             <div className="freeze-dried-frame">
-              <img src={freezeDried} alt="John's Freeze-Dried Water Ice packages in cherry and lemon flavors" width="600" height="570" loading="lazy" />
+              <img 
+                src={freezeDried} 
+                alt="John's Freeze-Dried Water Ice packages in cherry and lemon flavors" 
+                width="600" 
+                height="570" 
+                loading="lazy" 
+                decoding="async"
+              />
             </div>
           </Reveal>
         </div>
@@ -147,7 +156,14 @@ export default function Home() {
       <section className="green-cta-section" id="tradition">
         <div className="container green-cta-grid">
           <Reveal direction="left" className="green-cta-img">
-            <img src={storeCherryGelati} alt="Cherry gelati at John's Water Ice storefront" width="500" height="500" loading="lazy" />
+            <img 
+              src={storeCherryGelati} 
+              alt="Cherry gelati at John's Water Ice storefront" 
+              width="500" 
+              height="623" 
+              loading="lazy" 
+              decoding="async"
+            />
           </Reveal>
           <Reveal direction="right" className="green-cta-text">
             <h2>Experience the Sweet Tradition: John&apos;s Water Ice - A Taste of Family Heritage and Pure Refreshment</h2>
@@ -173,7 +189,15 @@ export default function Home() {
             <a href="#" className="btn btn-green-outline">Learn About Our History</a>
           </Reveal>
           <Reveal direction="right" className="about-img-wrap">
-            <img src={aboutCard} alt="John's Water Ice menu featuring colorful water ice flavors" width="500" height="500" loading="lazy" className="about-img" />
+            <img 
+              src={aboutCard} 
+              alt="John's Water Ice menu featuring colorful water ice flavors" 
+              width="500" 
+              height="500" 
+              loading="lazy" 
+              decoding="async"
+              className="about-img" 
+            />
           </Reveal>
         </div>
       </section>
@@ -247,7 +271,15 @@ export default function Home() {
             <a href="#" className="btn btn-pink">Request Catering</a>
           </Reveal>
           <Reveal direction="right" className="menu-img-wrap">
-            <img src={storeFront} alt="John's Water Ice storefront in Philadelphia" width="600" height="600" loading="lazy" className="menu-img" />
+            <img 
+              src={storeFront} 
+              alt="John's Water Ice storefront in Philadelphia" 
+              width="600" 
+              height="600" 
+              loading="lazy" 
+              decoding="async"
+              className="menu-img" 
+            />
           </Reveal>
         </div>
       </section>
@@ -256,7 +288,15 @@ export default function Home() {
       <section className="more-section section-padding" id="more-menu">
         <div className="container more-grid">
           <Reveal direction="left" className="more-img-wrap">
-            <img src={brandedCard} alt="John's Water Ice branded products including ice cream and gelati" width="500" height="500" loading="lazy" className="more-img" />
+            <img 
+              src={brandedCard} 
+              alt="John's Water Ice branded products including ice cream and gelati" 
+              width="500" 
+              height="500" 
+              loading="lazy" 
+              decoding="async"
+              className="more-img" 
+            />
           </Reveal>
           <Reveal direction="right" className="more-text">
             <h2>But that&apos;s not all; we take pride in offering more than just water ice.</h2>
@@ -287,7 +327,15 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal direction="right" className="founder-img-wrap">
-            <img src={ownerPhoto} alt="Anthony Cardullo, 3rd generation owner of John's Water Ice, holding water ice cups" width="500" height="625" loading="lazy" className="founder-img" />
+            <img 
+              src={ownerPhoto} 
+              alt="Anthony Cardullo, 3rd generation owner of John's Water Ice, holding water ice cups" 
+              width="500" 
+              height="727" 
+              loading="lazy" 
+              decoding="async"
+              className="founder-img" 
+            />
           </Reveal>
         </div>
       </section>
@@ -307,7 +355,15 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="container contact-grid">
           <Reveal direction="left" className="contact-img-wrap">
-            <img src={contactImg} alt="John's Water Ice pretzel and lemon water ice" width="500" height="500" loading="lazy" className="contact-img" />
+            <img 
+              src={contactImg} 
+              alt="John's Water Ice pretzel and lemon water ice" 
+              width="500" 
+              height="500" 
+              loading="lazy" 
+              decoding="async"
+              className="contact-img" 
+            />
           </Reveal>
           <Reveal direction="right" className="contact-info">
             <h2>Ready to experience the magic of John&apos;s Water Ice? Join us at our two convenient locations:</h2>
