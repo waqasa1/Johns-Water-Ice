@@ -1,31 +1,114 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John's Water Ice | Philadelphia's Finest Water Ice Since 1945</title>
-    <meta name="description" content="John's Water Ice has been serving Philadelphia's finest water ice, gelati, ice cream, and pretzels since 1945. Visit our locations in Philadelphia and Huntingdon Valley." />
-    <meta name="keywords" content="water ice, Philadelphia, Italian ice, gelati, ice cream, pretzels, John's Water Ice, dessert, frozen treats" />
-    <meta name="author" content="John's Water Ice" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.johnswaterice.com/" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="John's Water Ice | Philadelphia's Finest Water Ice Since 1945" />
-    <meta property="og:description" content="Buzzing destination serving water ice made from an old-school recipe, with rotating weekly flavors." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.johnswaterice.com/" />
-    <meta property="og:locale" content="en_US" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John's Water Ice</title>
+  <meta name="description"
+    content="John's Water Ice has been serving Philadelphia's finest water ice, gelati, ice cream, and pretzels since 1945. Visit our locations in Philadelphia and Huntingdon Valley." />
+  <meta name="keywords"
+    content="water ice, Philadelphia, Italian ice, gelati, ice cream, pretzels, John's Water Ice, dessert, frozen treats" />
+  <meta name="author" content="John's Water Ice" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.johnswaterice.com/" />
 
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="John's Water Ice | Philadelphia's Finest Water Ice Since 1945" />
+  <meta property="og:description"
+    content="Buzzing destination serving water ice made from an old-school recipe, with rotating weekly flavors." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.johnswaterice.com/" />
+  <meta property="og:locale" content="en_US" />
 
-    <link rel="icon" type="image/webp" href="/favicon.webp" />
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Structured Data: Local Business -->
-    <script type="application/ld+json">
+  <style>
+    /* Critical CSS for LCP */
+    :root {
+      --green-primary: #0b7a35;
+      --white: #ffffff;
+      --text-dark: #1a1a2e;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--white);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 1000;
+      min-height: 86px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .hero-section {
+      padding: 60px 0;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background-color: #e8f6ef;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      margin: 0 0 24px;
+      color: var(--text-dark);
+      line-height: 1.15;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+  </style>
+
+  <link rel="icon" type="image/webp" href="/favicon.webp" />
+
+  <!-- Structured Data: Local Business -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Restaurant",
@@ -61,9 +144,11 @@
       }
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

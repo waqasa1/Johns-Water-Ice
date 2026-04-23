@@ -47,6 +47,7 @@
   width: 100%;
   max-width: 420px;
   height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   object-fit: cover;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
@@ -130,6 +131,7 @@
 .freeze-dried-frame img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1206 / 1145;
   display: block;
 }
 
@@ -215,8 +217,10 @@
 
 .about-img {
   width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 16px;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 /* ====== FEATURES SECTION (RED) ====== */
@@ -327,8 +331,10 @@
 
 .menu-img {
   width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 /* ====== MORE THAN WATER ICE ====== */
@@ -341,8 +347,10 @@
 
 .more-img {
   width: 100%;
+  aspect-ratio: 500 / 500;
   border-radius: 16px;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 .more-text h2 {
@@ -382,8 +390,10 @@
 
 .founder-img {
   width: 100%;
+  aspect-ratio: 704 / 1024;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 .text-link {
@@ -412,8 +422,10 @@
 .contact-img {
   width: 100%;
   max-width: 480px;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
+  object-fit: cover;
 }
 
 .contact-info h2 {
