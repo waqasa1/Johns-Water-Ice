@@ -16,11 +16,11 @@ export default function Header() {
   // Close mobile menu on route change
   useEffect(() => {
     if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => document.body.classList.remove('menu-open');
   }, [mobileOpen]);
 
   return (
