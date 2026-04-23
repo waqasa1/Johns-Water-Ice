@@ -13,56 +13,9 @@ import contactImg from '../assets/pictures/johns-water-ice-pretzel-and-lemon-wat
 import logo from '../assets/pictures/johns-water-ice-logo.webp';
 
 /* ---- Scroll reveal component (CLS Optimized) ---- */
-const Reveal = ({ children, direction = 'up', delay = 0, className = '' }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hasEntered, setHasEntered] = useState(false);
-  const domRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          setHasEntered(true);
-        }
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    
-    if (domRef.current) observer.observe(domRef.current);
-    return () => { if (domRef.current) observer.unobserve(domRef.current); };
-  }, []);
-
-  const getTransform = () => {
-    // If it's already entered, stay at none
-    if (hasEntered) return 'none';
-    
-    // Check if we should slide at all (disable for first sections to prevent CLS)
-    const isFirstFold = className.includes('hero') || className.includes('freeze') || className.includes('green-cta');
-    if (isFirstFold) return 'none';
-
-    switch (direction) {
-      case 'up': return 'translate3d(0, 15px, 0)';
-      case 'down': return 'translate3d(0, -15px, 0)';
-      case 'left': return 'translate3d(-15px, 0, 0)';
-      case 'right': return 'translate3d(15px, 0, 0)';
-      default: return 'none';
-    }
-  };
-
+const Reveal = ({ children, className = '' }) => {
   return (
-    <div
-      ref={domRef}
-      className={className}
-      style={{
-        opacity: hasEntered ? 1 : 0,
-        transform: getTransform(),
-        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
-        willChange: 'opacity, transform',
-        // Hide until loaded to prevent visual jumping
-        visibility: hasEntered ? 'visible' : 'hidden'
-      }}
-    >
+    <div className={className} style={{ opacity: 1, transform: 'none' }}>
       {children}
     </div>
   );
