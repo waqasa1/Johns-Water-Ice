@@ -1,0 +1,273 @@
+/* ============================================
+   JOHN'S WATER ICE — DESIGN SYSTEM
+   ============================================ */
+
+/* --- CSS Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- CSS Variables --- */
+:root {
+  /* Brand Colors */
+  --green-primary: #0b7a35;
+  --green-dark: #086b2d;
+  --green-cta: #0d8a3e;
+  --green-light: #7fe5a8;
+  --green-mint: #a8f0c6;
+  --green-section: #0b9a3f;
+  --red-primary: #d42027;
+  --red-dark: #b91c22;
+  --red-section: #cc1e25;
+  --pink-light: #f8d7da;
+  --pink-button: #fce4ec;
+  --mint-bg: #e8f6ef;
+  --navy: #1a1a2e;
+  --white: #ffffff;
+  --off-white: #f9fafb;
+  --text-dark: #1a1a2e;
+  --text-body: #4a4a5a;
+  --text-gray: #555555;
+  --text-light: #ffffff;
+  --border-light: #e5e7eb;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-ui: 'Poppins', system-ui, sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px 0;
+  --container-width: 1200px;
+  --container-padding: 0 24px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Base Styles --- */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body.menu-open { overflow: hidden; }
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-dark);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+
+p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* --- Layout Utilities --- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.section-padding {
+  padding: var(--section-padding);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-green {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+  border: 2px solid var(--green-light);
+}
+.btn-green:hover {
+  background-color: var(--green-mint);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-green-outline {
+  background-color: transparent;
+  color: var(--green-primary);
+  border: 2px solid var(--green-primary);
+}
+.btn-green-outline:hover {
+  background-color: var(--green-primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-pink {
+  background-color: var(--pink-button);
+  color: var(--red-primary);
+  border: 2px solid var(--pink-button);
+}
+.btn-pink:hover {
+  background-color: #f8bbd0;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--green-primary);
+  border: 2px solid var(--white);
+}
+.btn-white:hover {
+  background-color: var(--green-light);
+  transform: translateY(-2px);
+}
+
+/* --- Confetti / Sprinkles Background Pattern --- */
+.confetti-bg {
+  background-color: var(--mint-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect x='25' y='10' width='14' height='3.5' rx='1.75' fill='%23ff7eb3' transform='rotate(35 32 11.75)' opacity='0.7'/%3E%3Crect x='95' y='40' width='14' height='3.5' rx='1.75' fill='%237ec8e3' transform='rotate(-50 102 41.75)' opacity='0.6'/%3E%3Crect x='200' y='20' width='14' height='3.5' rx='1.75' fill='%23ffb347' transform='rotate(70 207 21.75)' opacity='0.5'/%3E%3Crect x='310' y='35' width='14' height='3.5' rx='1.75' fill='%234a69bd' transform='rotate(-30 317 36.75)' opacity='0.6'/%3E%3Crect x='370' y='15' width='14' height='3.5' rx='1.75' fill='%23ff9a9e' transform='rotate(45 377 16.75)' opacity='0.7'/%3E%3Crect x='50' y='80' width='14' height='3.5' rx='1.75' fill='%2387ceeb' transform='rotate(-65 57 81.75)' opacity='0.5'/%3E%3Crect x='150' y='95' width='14' height='3.5' rx='1.75' fill='%23b39ddb' transform='rotate(20 157 96.75)' opacity='0.6'/%3E%3Crect x='260' y='75' width='14' height='3.5' rx='1.75' fill='%23ff6b6b' transform='rotate(-40 267 76.75)' opacity='0.5'/%3E%3Crect x='340' y='90' width='14' height='3.5' rx='1.75' fill='%237fe5a8' transform='rotate(55 347 91.75)' opacity='0.4'/%3E%3Crect x='30' y='150' width='14' height='3.5' rx='1.75' fill='%23f7dc6f' transform='rotate(-25 37 151.75)' opacity='0.6'/%3E%3Crect x='120' y='170' width='14' height='3.5' rx='1.75' fill='%23ff7eb3' transform='rotate(80 127 171.75)' opacity='0.5'/%3E%3Crect x='220' y='140' width='14' height='3.5' rx='1.75' fill='%2387ceeb' transform='rotate(-55 227 141.75)' opacity='0.7'/%3E%3Crect x='300' y='160' width='14' height='3.5' rx='1.75' fill='%23ffb347' transform='rotate(15 307 161.75)' opacity='0.5'/%3E%3Crect x='380' y='145' width='14' height='3.5' rx='1.75' fill='%234a69bd' transform='rotate(-70 387 146.75)' opacity='0.6'/%3E%3Crect x='70' y='220' width='14' height='3.5' rx='1.75' fill='%23ff9a9e' transform='rotate(40 77 221.75)' opacity='0.6'/%3E%3Crect x='170' y='240' width='14' height='3.5' rx='1.75' fill='%237ec8e3' transform='rotate(-35 177 241.75)' opacity='0.5'/%3E%3Crect x='280' y='210' width='14' height='3.5' rx='1.75' fill='%23b39ddb' transform='rotate(60 287 211.75)' opacity='0.7'/%3E%3Crect x='350' y='230' width='14' height='3.5' rx='1.75' fill='%23ff6b6b' transform='rotate(-20 357 231.75)' opacity='0.5'/%3E%3Crect x='15' y='280' width='14' height='3.5' rx='1.75' fill='%2387ceeb' transform='rotate(50 22 281.75)' opacity='0.6'/%3E%3Crect x='100' y='300' width='14' height='3.5' rx='1.75' fill='%23f7dc6f' transform='rotate(-45 107 301.75)' opacity='0.5'/%3E%3Crect x='190' y='290' width='14' height='3.5' rx='1.75' fill='%23ff7eb3' transform='rotate(25 197 291.75)' opacity='0.7'/%3E%3Crect x='320' y='280' width='14' height='3.5' rx='1.75' fill='%237fe5a8' transform='rotate(-60 327 281.75)' opacity='0.4'/%3E%3Crect x='390' y='300' width='14' height='3.5' rx='1.75' fill='%23ffb347' transform='rotate(75 397 301.75)' opacity='0.6'/%3E%3Crect x='55' y='350' width='14' height='3.5' rx='1.75' fill='%234a69bd' transform='rotate(-15 62 351.75)' opacity='0.5'/%3E%3Crect x='140' y='370' width='14' height='3.5' rx='1.75' fill='%23ff9a9e' transform='rotate(65 147 371.75)' opacity='0.6'/%3E%3Crect x='240' y='355' width='14' height='3.5' rx='1.75' fill='%2387ceeb' transform='rotate(-40 247 356.75)' opacity='0.7'/%3E%3Crect x='360' y='365' width='14' height='3.5' rx='1.75' fill='%23b39ddb' transform='rotate(30 367 366.75)' opacity='0.5'/%3E%3Crect x='45' y='120' width='14' height='3.5' rx='1.75' fill='%23ffffff' transform='rotate(-55 52 121.75)' opacity='0.4'/%3E%3Crect x='330' y='120' width='14' height='3.5' rx='1.75' fill='%23ffffff' transform='rotate(45 337 121.75)' opacity='0.3'/%3E%3Crect x='180' y='55' width='14' height='3.5' rx='1.75' fill='%23ff6b6b' transform='rotate(-80 187 56.75)' opacity='0.5'/%3E%3Crect x='75' y='390' width='14' height='3.5' rx='1.75' fill='%237ec8e3' transform='rotate(10 82 391.75)' opacity='0.5'/%3E%3Crect x='290' y='385' width='14' height='3.5' rx='1.75' fill='%23ff7eb3' transform='rotate(-30 297 386.75)' opacity='0.6'/%3E%3Crect x='160' y='130' width='14' height='3.5' rx='1.75' fill='%23ffb347' transform='rotate(55 167 131.75)' opacity='0.4'/%3E%3Crect x='250' y='330' width='14' height='3.5' rx='1.75' fill='%23f7dc6f' transform='rotate(-70 257 331.75)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Scroll to Top Button --- */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: var(--green-light);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-top-btn:hover {
+  background-color: var(--green-mint);
+  transform: translateY(-3px);
+}
+
+/* --- Page Loader --- */
+.page-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: var(--font-ui);
+  color: var(--green-primary);
+  font-size: 1.1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 50px 0;
+    --container-padding: 0 16px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+}
