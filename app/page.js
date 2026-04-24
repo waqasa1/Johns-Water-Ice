@@ -284,12 +284,15 @@ export default function Home() {
           <div className="testimonial-card">
             <h3 className="testimonial-name">{testimonials[currentTestimonial].name}</h3>
           </div>
-          <div className="testimonial-dots">
+          <div className="testimonial-dots" role="tablist" aria-label="Testimonial navigation">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
                 className={`dot${idx === currentTestimonial ? ' active' : ''}`}
                 onClick={() => goToTestimonial(idx)}
+                role="tab"
+                aria-selected={idx === currentTestimonial}
+                aria-label={`Go to testimonial ${idx + 1}`}
                 type="button"
               />
             ))}

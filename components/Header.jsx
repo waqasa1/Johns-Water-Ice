@@ -52,7 +52,12 @@ export default function Header() {
               </ul>
             </li>
             <li className="has-dropdown">
-              <button className="nav-link dropdown-trigger" type="button" aria-expanded="false">
+              <button 
+                className="nav-link dropdown-trigger" 
+                type="button" 
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
                 About Us
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
                   <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
